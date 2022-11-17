@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Farticulo.mercadolibre.com.ar%2FMLA-643255827-bateria-auto-willard-12x65-ub620-12-volt-65-amper-_JM&psig=AOvVaw0C9ZSAXEOrtPShnNaK9mta&ust=1668717573874000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjhvZvIs_sCFQAAAAAdAAAAABAD" ,
+    "nombre": "Bateria Moura",
+    "precio": 30000
+  },
+
+  {
+    "id": 2,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Farticulo.mercadolibre.com.ar%2FMLA-643255827-bateria-auto-willard-12x65-ub620-12-volt-65-amper-_JM&psig=AOvVaw0C9ZSAXEOrtPShnNaK9mta&ust=1668717573874000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjhvZvIs_sCFQAAAAAdAAAAABAD",
+    "nombre": "Bateria Vulcano",
+    "precio": 28000
+  },
+
+  {
+    "id": 3,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Farticulo.mercadolibre.com.ar%2FMLA-643255827-bateria-auto-willard-12x65-ub620-12-volt-65-amper-_JM&psig=AOvVaw0C9ZSAXEOrtPShnNaK9mta&ust=1668717573874000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjhvZvIs_sCFQAAAAAdAAAAABAD",
+    "nombre": "Bateria Heliar",
+    "precio": 25000
+  },
+
+  {
+    "id": 4,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Farticulo.mercadolibre.com.ar%2FMLA-643255827-bateria-auto-willard-12x65-ub620-12-volt-65-amper-_JM&psig=AOvVaw0C9ZSAXEOrtPShnNaK9mta&ust=1668717573874000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjhvZvIs_sCFQAAAAAdAAAAABAD",
+    "nombre": "Bateria Prestolite",
+    "precio": 23000
+  },
+
+  {
+    "id": 5,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Farticulo.mercadolibre.com.ar%2FMLA-643255827-bateria-auto-willard-12x65-ub620-12-volt-65-amper-_JM&psig=AOvVaw0C9ZSAXEOrtPShnNaK9mta&ust=1668717573874000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjhvZvIs_sCFQAAAAAdAAAAABAD",
+    "nombre": "Bateria Varta",
+    "precio": 20000
+  },
+
+  {
+    "id": 6,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Farticulo.mercadolibre.com.ar%2FMLA-643255827-bateria-auto-willard-12x65-ub620-12-volt-65-amper-_JM&psig=AOvVaw0C9ZSAXEOrtPShnNaK9mta&ust=1668717573874000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjhvZvIs_sCFQAAAAAdAAAAABAD",
+    "nombre": "Bateria Willard",
+    "precio": 18000 
+  }
+]
