@@ -45,9 +45,9 @@ function renderizarProds(){
 
       <div class="post-content d-flex flex-column">
         <h3 class="post-title">${producto.nombre}</h3>
-        <p>
-          ${producto.precio}
-        </p>
+        <h4>
+          $ ${producto.precio}
+        </h4>
         <button id= "btn ${producto.id}" class="btn btn-warning">Agregar 
         al carrito</></button>
       </div>
@@ -62,12 +62,13 @@ function renderizarProds(){
 
   productosJSON.forEach (producto => {
     //evento para cada boton
-    document.getElementById (`btn ${producto.id}`).addEventListener ("click",function(){
+    document.getElementById (`btn ${producto.id}`).addEventListener("click",function(){
       agregarAlCarrito (producto);
     });
   });
 
 };
+
 
 function agregarAlCarrito (productoComprado) {
   carrito.push(productoComprado);
@@ -83,15 +84,13 @@ function agregarAlCarrito (productoComprado) {
     timer: 1500
   })
   document.getElementById("tablaBody").innerHTML += `
-
-  <tr>
-    <td> ${productoComprado.id} </td>
-    <td> ${productoComprado.nombre} </td>
-    <td> ${productoComprado.precio} </td>
-    <td> <button class = "btn btn-light" onclick = "eliminar(event)">🗑️</button></td>
-  </tr>
-
-  `;
+    <tr>
+      <td> ${productoComprado.id} </td>
+      <td> ${productoComprado.nombre} </td>
+      <td> ${productoComprado.precio} </td>
+      <td> <button class = "btn btn-light" onclick = "eliminar(event)">🗑️</button></td>
+    </tr>
+    `;
   totalCarrito = carrito.reduce ((acumulador, producto)=> acumulador + producto.precio,0);
   let infoTotal = document.getElementById ("total");
   infoTotal.innerText ="Total a pagar $: " + totalCarrito;
@@ -99,6 +98,7 @@ function agregarAlCarrito (productoComprado) {
   //Storage
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
 
 function eliminar(ev){
   console.log(ev);
@@ -121,16 +121,42 @@ function eliminar(ev){
 
 };
 
+
+/////////////////////////////////
+
+
 //Gestion de productos JSON
-async function obtenerJSON() {
+//async function obtenerJSON() {
 
-  const URLJSON = "productos.json";
-  const resp = await fetch(URLJSON);
-  const data = await resp.json();
-  productosJSON = data;
-  renderizarProds();
+  //const URLJSON = "productos.json";
+  //const resp = await fetch(URLJSON);
+  //const data = await resp.json();
+  //productosJSON = data;
+  //renderizarProds();
 
-};
+//};
+
+
+const obtenerJSON = async () => {
+  try {
+      const res = await fetch('./assets/js/productos.json')
+      const data = await res.json()
+      productosJSON = data;
+      console.log(data)
+      console.log(productosJSON)
+      renderizarProds(data)
+  } catch (error) {
+      console.log(error)
+  };
+} ;
+
+document.addEventListener('DOMContentLoaded', () => {
+  obtenerJSON()
+  });
+
+
+/////////////////////////////////////
+
 
 //Cerrando la compra
 botonFinalizar.onclick = () => {
@@ -153,3 +179,5 @@ botonFinalizar.onclick = () => {
 
   };
 };
+
+obtenerJSON();
